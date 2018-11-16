@@ -1,0 +1,22 @@
+#include<unistd.h>
+#include<sdtio.h>
+
+void main(){
+  pid_t childpid;
+  int t =0;
+  childpid = fork();
+    if(childpid>=0){
+      if(childpid==0){
+        printf("CHILD: pid = %d, i+5 =%d\n"|, getpid(), i+5);
+      }
+      else{
+        printf("PARENT: pid =%d, i+10=%d\n, getpid(), i+10");
+        wait(NULL);
+      }
+    }
+    else
+    {
+      printf("fork error \n");
+    }
+    
+}
